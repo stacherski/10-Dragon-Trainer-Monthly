@@ -1,0 +1,8 @@
+details {
+  margin-block-end: 1rem;
+}
+
+details summary {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
