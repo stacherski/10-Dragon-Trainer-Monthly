@@ -5,7 +5,11 @@ const drawData = (data) => {
   APP.innerHTML = `<h1>${data.publication}</h1>`;
   APP.innerHTML += `${data.articles
     .map((article) => {
-      let art = `<details open><summary>${article.title}</summary><h4>${article.author} @ ${article.pubdate}</h4><p>${article.article}</p><p><a href="${article.url}">Permalink</a></p></details>`;
+      let art = `<details id="${article.url.slice(1)}" open><summary>${
+        article.title
+      }</summary><h4>${article.author} @ ${article.pubdate}</h4><p>${
+        article.article
+      }</p><p><a href="${article.url}">Permalink</a></p></details>`;
       return art;
     })
     .join("")}`;
